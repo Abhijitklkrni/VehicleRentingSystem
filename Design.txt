@@ -1,0 +1,82 @@
+Vehicle Renting System
+Zoom Car
+Use case
+1.User should be able to view all available vehicles
+2.User should be able to select the vehicle and Book
+3.User to get confirmation ticket with pick up location
+4.User should be able to pick up the vehicle
+5.User should be able to return back the vehicle
+6.User to get the checkout receipt with payment details
+7.User should be able to pay
+
+
+Vehicle
+Ticket
+Receipt
+
+UserRequest
+- startDateTime
+- EndDateTime
+- Location
+
+Response - List<VehicleDetails>
+VehicleDetails
+- ImageUrl
+- pickupLocation
+- estimated Price
+- Vehicle
+
+User
+- userId
+- name
+- age
+- phone number
+- emailId
+- AddressProof
+- DLNumber
+
+Vehicle Booth
+- Name
+- location
+- List<Vehicle>
+- User attender
+
+
+Vehicle
+- Name
+- VehicleId
+- currentVehicleBooth
+- Reg. number
+- TransmissionType
+- capacity
+- Tags
+- VehicleCondition ( Good, Needs Servicing, Out Of Order)
+- pricePerHourWithPetrol
+- pricePerHourWithoutPetrol
+
+VehicleBooking
+- VehicleId
+- userId
+- StartDateTime
+- EndDateTime
+
+Ticket
+- PickUpLocation
+- VehicleId
+- PickUpTime
+- DropTime
+- EstimatedPrice
+- attenderContactNumber
+
+CheckoutReceipt
+- ticketId
+- ActualDropDateTime
+- payablePrice
+- List<Payment>
+
+Payment
+- paymentId
+- type
+- price
+- status
+- source
